@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f1e8" />
+    <title>Đặt bàn hôm nay · Bếp Nhà</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./admin.css" />
+    <script src="./admin.js" defer></script>
+  </head>
+  <body class="admin-body dashboard-body">
+    <header class="admin-header">
+      <a class="brand" href="/" aria-label="Bếp Nhà"><span class="brand-mark" aria-hidden="true">b.</span><span>BẾP NHÀ<small>QUẢN TRỊ NHÀ HÀNG</small></span></a>
+      <div class="admin-identity"><span id="admin-identity">Quản trị</span><button id="admin-logout" class="logout-button" type="button">Đăng xuất</button></div>
+    </header>
+    <main class="admin-main" id="admin-dashboard" hidden>
+      <div class="dashboard-heading"><div><p class="eyebrow"><span></span> SỔ ĐẶT BÀN</p><h1>Hôm nay<em>.</em></h1><p class="dashboard-date" id="dashboard-date"></p></div><div class="booking-count"><strong id="booking-count">0</strong><span>đơn đặt bàn</span></div></div>
+      <div class="dashboard-toolbar"><label for="status-filter">Trạng thái</label><select id="status-filter" class="form-control"><option value="all">Tất cả</option><option value="pending">Chờ</option><option value="confirmed">Đã nhận</option><option value="cancelled">Đã hủy</option></select><button class="refresh-button" id="refresh-bookings" type="button">Làm mới ↻</button></div>
+      <p class="admin-message dashboard-message" id="dashboard-message" role="status" aria-live="polite"></p>
+      <section class="booking-list" id="admin-bookings" aria-live="polite"></section>
+    </main>
+    <script>document.documentElement.classList.add('admin-route');</script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f6f1e8" />
+    <meta name="description" content="Bếp Nhà — món ngon theo mùa, nấu bằng sự tử tế. Xem thực đơn và đặt bàn." />
+    <title>Bếp Nhà — Món ngon, chuyện thân quen</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Bếp Nhà, về đầu trang">
+        <span class="brand-mark" aria-hidden="true">b.</span>
+        <span>BẾP NHÀ<small>BỮA CƠM THÂN QUEN</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Điều hướng chính">
+        <a href="#story">Câu chuyện</a>
+        <a href="#menu">Thực đơn</a>
+        <a href="#visit">Ghé thăm</a>
+      </nav>
+      <button class="cart-trigger" id="cart-open" type="button" aria-haspopup="dialog" aria-controls="cart-overlay" aria-label="Mở giỏ hàng, 0 món">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 10.1a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 1.9-1.4L22 8H6"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>
+        <span>Giỏ</span><span class="cart-count" id="cart-count" aria-live="polite">0</span>
+      </button>
+      <a class="header-booking" href="#booking">Đặt bàn <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> BẾP NHÀ · NẤU MỖI NGÀY</p>
+          <h1 id="hero-title">Món ngon,<br />chuyện <em>thân quen.</em></h1>
+          <p class="hero-description">Bữa cơm nhà, thêm một chút bất ngờ. Nguyên liệu theo mùa, món ăn nấu chậm và luôn có chỗ cho bạn.</p>
+          <a class="button button-dark" href="#menu">Khám phá thực đơn <span aria-hidden="true">↓</span></a>
+          <div class="hero-note"><span class="note-line"></span><span>Ngon lành từ căn bếp nhỏ<br />của tụi mình, mỗi ngày.</span></div>
+        </div>
+        <div class="hero-visual">
+          <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=76" srcset="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=760&q=74 760w, https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1100&q=76 1100w" sizes="(max-width: 767px) 84vw, (max-width: 1100px) 58vw, 52vw" width="1100" height="780" alt="Mâm cơm Việt với rau tươi và các món ăn nhà làm" fetchpriority="high" decoding="async" />
+          <div class="image-caption"><span>01 / 03</span><span>Một bữa cơm thật vui</span></div>
+          <span class="hero-stamp" aria-hidden="true">TƯƠI<br />MỖI<br />NGÀY</span>
+        </div>
+        <div class="hero-index" aria-hidden="true">BỮA CƠM NHÀ — TỪ 2021</div>
+      </section>
+
+      <section class="story section-wrap" id="story" aria-labelledby="story-title">
+        <p class="eyebrow"><span></span> CHUYỆN CỦA BẾP</p>
+        <div class="story-grid">
+          <h2 id="story-title">Nấu như thể<br />bạn <em>đang ở nhà.</em></h2>
+          <div class="story-copy"><p>Tụi mình tin một bữa ăn ngon bắt đầu từ điều giản dị: rau vừa hái, nồi nước dùng ninh đủ lâu và người ngồi ăn cùng nhau.</p><a class="text-link" href="#visit">Tìm hiểu về Bếp Nhà <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </section>
+
+      <section class="menu-section" id="menu" aria-labelledby="menu-title">
+        <div class="section-wrap">
+          <div class="menu-heading">
+            <div><p class="eyebrow"><span></span> TỪ CĂN BẾP HÔM NAY</p><h2 id="menu-title">Món nhà <em>mình nấu.</em></h2></div>
+            <p>Món ngon theo mùa,<br />thay đổi mỗi ngày một chút.</p>
+          </div>
+          <div class="featured-dish">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=760&q=72" srcset="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=480&q=70 480w, https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=760&q=72 760w, https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=74 1000w" sizes="(max-width: 767px) 92vw, 60vw" width="1000" height="680" alt="Mâm rau củ và món ăn nóng hổi của Bếp Nhà" loading="lazy" decoding="async" />
+            <div class="featured-info"><span class="dish-tag">MÓN ĐƯỢC THƯƠNG</span><h3>Cơm nhà<br />đủ đầy.</h3><p>Một mâm cơm nóng, vài món ngon theo mùa — đơn giản vậy thôi mà nhớ lâu.</p><a href="#menu-list" class="text-link">Xem các món hôm nay <span aria-hidden="true">↓</span></a></div>
+            <span class="featured-number" aria-hidden="true">01</span>
+          </div>
+          <div class="menu-toolbar" id="menu-list">
+            <div class="menu-tabs" role="tablist" aria-label="Danh mục thực đơn">
+              <button class="menu-tab is-active" id="tab-main" type="button" role="tab" aria-selected="true" aria-controls="menu-grid" data-category="main">Món chính <span>04</span></button>
+              <button class="menu-tab" id="tab-snacks" type="button" role="tab" aria-selected="false" aria-controls="menu-grid" data-category="snacks" tabindex="-1">Ăn vặt <span>03</span></button>
+              <button class="menu-tab" id="tab-drinks" type="button" role="tab" aria-selected="false" aria-controls="menu-grid" data-category="drinks" tabindex="-1">Nước uống <span>03</span></button>
+            </div>
+            <label class="search-box"><span class="sr-only">Tìm món ăn, có thể nhập không dấu</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.2 4.2"></path></svg><input id="menu-search" type="search" placeholder="Tìm món ăn..." autocomplete="off" /></label>
+          </div>
+          <p class="search-hint" id="search-hint">Gợi ý: bạn có thể tìm kiếm không dấu, ví dụ “ca phe”.</p>
+          <div class="menu-grid" id="menu-grid" role="tabpanel" aria-labelledby="tab-main" tabindex="0" aria-live="polite"></div>
+          <p class="empty-state" id="empty-state" hidden>Chưa tìm thấy món này. Thử từ khóa khác nhé.</p>
+        </div>
+      </section>
+
+      <section class="booking-section" id="booking" aria-labelledby="booking-title">
+        <div class="section-wrap booking-layout">
+          <div class="booking-intro"><p class="eyebrow"><span></span> GIỮ CHỖ CHO BẠN</p><h2 id="booking-title">Hẹn nhau<br />một <em>bữa ngon.</em></h2><p>Chọn ngày, giờ và số người. Mỗi khung giờ nhận tối đa 10 bàn.</p></div>
+          <form class="booking-form" id="booking-form">
+            <label class="field-label" for="booking-date">Ngày đến</label>
+            <input class="form-control" id="booking-date" name="date" type="date" required />
+            <fieldset class="slot-fieldset"><legend class="field-label">Chọn giờ <span id="slot-opening-note"></span></legend><div class="slot-grid" id="slot-grid" aria-live="polite"></div><p class="field-help" id="slot-help">Chọn một khung giờ còn chỗ.</p></fieldset>
+            <div class="booking-fields"><label><span class="field-label">Họ tên</span><input class="form-control" name="name" type="text" maxlength="120" placeholder="Tên của bạn" autocomplete="name" required /></label><label><span class="field-label">Số điện thoại</span><input class="form-control" name="phone" type="tel" maxlength="24" placeholder="09xx xxx xxx" autocomplete="tel" required /></label></div>
+            <label class="field-label party-label" for="booking-party">Số người</label><select class="form-control party-select" id="booking-party" name="partySize" required><option value="1">1 người</option><option value="2" selected>2 người</option><option value="3">3 người</option><option value="4">4 người</option><option value="5">5 người</option><option value="6">6 người</option><option value="7">7 người</option><option value="8">8 người</option><option value="9">9 người</option><option value="10">10 người</option><option value="11">11 người</option><option value="12">12 người</option><option value="13">13 người</option><option value="14">14 người</option><option value="15">15 người</option><option value="16">16 người</option><option value="17">17 người</option><option value="18">18 người</option><option value="19">19 người</option><option value="20">20 người</option><option value="21">21 người</option><option value="22">22 người</option><option value="23">23 người</option><option value="24">24 người</option><option value="25">25 người</option><option value="26">26 người</option><option value="27">27 người</option><option value="28">28 người</option><option value="29">29 người</option><option value="30">30 người</option></select>
+            <div class="voucher-panel">
+              <label class="field-label" for="voucher-code">Mã ưu đãi</label>
+              <div class="voucher-entry"><input class="form-control" id="voucher-code" type="text" maxlength="32" placeholder="Nhập mã CHIEUVUI" autocomplete="off" /><button class="voucher-apply" id="voucher-apply" type="button">Áp dụng</button></div>
+              <p class="voucher-feedback" id="voucher-feedback" role="status" aria-live="polite"></p><ul class="voucher-errors" id="voucher-errors"></ul>
+            </div>
+            <div class="order-summary" aria-live="polite"><div><span>Tạm tính giỏ hàng</span><strong id="order-subtotal">0đ</strong></div><div id="order-discount-row" hidden><span>CHIEUVUI · giảm 20%</span><strong id="order-discount">−0đ</strong></div><div class="order-total"><span>Thành tiền</span><strong id="order-total">0đ</strong></div></div>
+            <div class="booking-response" id="booking-response" role="status" aria-live="polite"></div>
+            <button class="button button-dark booking-submit" id="booking-submit" type="submit">Gửi yêu cầu đặt bàn <span aria-hidden="true">↗</span></button>
+          </form>
+        </div>
+      </section>
+
+      <section class="visit-section section-wrap" id="visit">
+        <div><p class="eyebrow"><span></span> HẸN BẠN Ở BẾP</p><h2>Một chỗ<br />ngồi <em>đang chờ.</em></h2></div>
+        <div class="visit-details"><p>Ghé ăn trưa, hẹn bữa tối, hay đơn giản là một ly cà phê. Bếp lúc nào cũng vui khi có bạn.</p><p class="hours">Mỗi ngày · <span id="visit-hours">giờ phục vụ</span><br />12 Nguyễn Thị Minh Khai, Quận 1</p><a class="button button-dark" href="tel:+842839000000">Gọi đặt bàn <span aria-hidden="true">↗</span></a></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">b.</span><span>BẾP NHÀ<small>BỮA CƠM THÂN QUEN</small></span></a><p>Nấu bằng sự tử tế, mời bằng cả tấm lòng.</p><span>© BẾP NHÀ 2026</span></footer>
+
+    <div class="cart-overlay" id="cart-overlay" hidden>
+      <button class="cart-backdrop" id="cart-backdrop" type="button" aria-label="Đóng giỏ hàng"></button>
+      <section class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" tabindex="-1">
+        <div class="cart-header"><div><p class="eyebrow"><span></span> BẾP NHÀ</p><h2 id="cart-title">Giỏ <em>của bạn.</em></h2></div><button class="cart-close" id="cart-close" type="button" aria-label="Đóng giỏ hàng">×</button></div>
+        <p class="cart-message" id="cart-message" role="status" aria-live="polite"></p>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-empty" id="cart-empty">Giỏ còn đang chờ món ngon đầu tiên.</div>
+        <div class="cart-footer" id="cart-footer" hidden><div class="cart-total"><span>Tạm tính</span><strong id="cart-subtotal">0đ</strong></div><div class="cart-total cart-discount" id="cart-discount-line" hidden><span>CHIEUVUI · giảm 20%</span><strong id="cart-discount">−0đ</strong></div><div class="cart-total cart-grand-total"><span>Thành tiền</span><strong id="cart-total">0đ</strong></div><a class="button button-dark cart-checkout" href="#booking">Tiếp tục đặt bàn <span aria-hidden="true">↗</span></a><p class="cart-note">Giá sẽ được máy chủ xác nhận khi gửi đặt bàn.</p></div>
+      </section>
+    </div>
+    <a class="mobile-booking" href="#booking">Đặt bàn <span aria-hidden="true">↗</span></a>
+  </body>
+</html>

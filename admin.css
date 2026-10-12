@@ -1,0 +1,62 @@
+.admin-body { min-height: 100vh; background: #f1ede5; }
+.login-body { min-height: 100svh; padding: 24px; display: grid; place-items: center; }
+.login-card { width: min(100%, 430px); padding: 32px 25px; background: var(--color-paper); box-shadow: 0 16px 50px rgba(41,40,32,.08); }
+.login-card > .brand { margin-bottom: 43px; }
+.login-card .eyebrow { margin-bottom: 13px; }
+.login-card h1 { margin-bottom: 10px; font-size: 3.5rem; }
+.login-card h1 em { color: var(--color-olive); font-weight: 500; }
+.login-intro { margin-bottom: 24px; color: var(--color-muted); font-size: 12px; }
+.login-password-label { margin-top: 16px; }
+.admin-submit { width: 100%; margin-top: 8px; border: 0; cursor: pointer; }
+.admin-submit:disabled { opacity: .55; cursor: wait; }
+.admin-header { min-height: 76px; padding: 0 var(--space-page); display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(41,40,32,.1); background: var(--color-cream); }
+.admin-identity { display: flex; align-items: center; gap: 12px; color: var(--color-muted); font-size: 10px; }
+.logout-button, .refresh-button { min-height: 37px; padding: 0 12px; border: 1px solid #d8d2c8; background: transparent; color: var(--color-charcoal); font-size: 10px; font-weight: 600; cursor: pointer; }
+.admin-main { width: min(100% - 32px, 1000px); margin: 0 auto; padding: 42px 0 80px; }
+.dashboard-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; }
+.dashboard-heading .eyebrow { margin-bottom: 10px; }
+.dashboard-heading h1 { margin: 0; font-size: clamp(2.7rem, 9vw, 4rem); line-height: 1; }
+.dashboard-heading h1 em { color: var(--color-olive); }
+.dashboard-date { margin: 10px 0 0; color: var(--color-muted); font-size: 11px; }
+.booking-count { display: flex; align-items: baseline; gap: 7px; color: var(--color-muted); font-size: 10px; white-space: nowrap; }
+.booking-count strong { color: var(--color-olive); font-family: var(--font-heading); font-size: 30px; font-weight: 500; }
+.dashboard-toolbar { margin-top: 27px; padding: 13px 0; display: flex; align-items: center; gap: 9px; border-top: 1px solid #ddd7cc; border-bottom: 1px solid #ddd7cc; }
+.dashboard-toolbar label { color: var(--color-muted); font-size: 10px; }
+.dashboard-toolbar select { width: auto; min-width: 110px; min-height: 36px; padding: 0 28px 0 9px; font-size: 10px; }
+.refresh-button { margin-left: auto; min-height: 36px; }
+.admin-message { min-height: 18px; margin: 10px 0; color: #8a422f; font-size: 11px; line-height: 1.5; }
+.dashboard-message:empty { display: none; }
+.booking-list { display: grid; gap: 12px; }
+.admin-booking-card { padding: 16px; display: grid; gap: 13px; background: var(--color-paper); box-shadow: 0 3px 13px rgba(41,40,32,.035); }
+.admin-booking-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.admin-booking-time { color: var(--color-olive); font-family: var(--font-heading); font-size: 27px; line-height: 1; }
+.admin-booking-code { display: block; margin-top: 5px; color: var(--color-muted); font-size: 8px; letter-spacing: .1em; }
+.status-pill { padding: 5px 8px; display: inline-block; background: #efe9db; color: #826b3c; font-size: 8px; font-weight: 700; letter-spacing: .05em; white-space: nowrap; }
+.status-pill.confirmed { background: #e7ebdf; color: #596348; }
+.status-pill.cancelled { background: #f3e5e0; color: #96543d; }
+.admin-booking-name { margin: 0 0 3px; font-family: var(--font-heading); font-size: 21px; line-height: 1.2; }
+.admin-booking-contact { margin: 0; color: var(--color-muted); font-size: 10px; }
+.admin-booking-contact a { text-decoration: underline; text-underline-offset: 2px; }
+.admin-party { color: var(--color-charcoal); font-size: 10px; }
+.admin-items { margin: 0; padding: 10px 0 0 15px; border-top: 1px solid #eee9e1; color: var(--color-muted); font-size: 10px; line-height: 1.7; }
+.admin-order-total { display: flex; justify-content: space-between; gap: 10px; color: var(--color-muted); font-size: 9px; }
+.admin-order-total strong { color: var(--color-charcoal); font-size: 10px; }
+.admin-actions { display: flex; gap: 8px; }
+.admin-action { min-height: 38px; padding: 0 12px; flex: 1; border: 1px solid var(--color-olive); background: var(--color-olive); color: white; font-size: 10px; font-weight: 700; cursor: pointer; }
+.admin-action.cancel { border-color: #d9c4bb; background: transparent; color: #8b4c38; }
+.admin-action:disabled { opacity: .55; cursor: wait; }
+.admin-empty { padding: 48px 15px; color: var(--color-muted); font-family: var(--font-heading); font-size: 19px; font-style: italic; text-align: center; background: var(--color-paper); }
+
+@media (min-width: 650px) {
+  .login-card { padding: 43px 42px; }
+  .admin-main { padding-top: 65px; }
+  .admin-booking-card { grid-template-columns: 90px minmax(170px, 1fr) minmax(160px, .9fr) auto; align-items: center; gap: 17px; padding: 18px 20px; }
+  .admin-booking-top { display: block; }
+  .admin-booking-top .status-pill { margin-top: 8px; }
+  .admin-booking-person { align-self: center; }
+  .admin-party { align-self: center; }
+  .admin-actions { min-width: 150px; flex-direction: column; }
+  .admin-action { min-height: 34px; }
+  .admin-items { grid-column: 2 / 4; grid-row: 2; }
+  .admin-order-total { grid-column: 4; grid-row: 2; }
+}

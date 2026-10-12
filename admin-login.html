@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f1e8" />
+    <title>Đăng nhập quản trị · Bếp Nhà</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./admin.css" />
+    <script src="./admin.js" defer></script>
+  </head>
+  <body class="admin-body login-body">
+    <main class="login-card">
+      <a class="brand" href="/" aria-label="Bếp Nhà"><span class="brand-mark" aria-hidden="true">b.</span><span>BẾP NHÀ<small>KHU VỰC QUẢN TRỊ</small></span></a>
+      <p class="eyebrow"><span></span> CHÀO MỪNG TRỞ LẠI</p>
+      <h1>Đăng <em>nhập.</em></h1>
+      <p class="login-intro">Đăng nhập để xem và quản lý các bàn đặt hôm nay.</p>
+      <form id="admin-login-form">
+        <label class="field-label" for="admin-email">Email</label>
+        <input class="form-control" id="admin-email" name="email" type="email" autocomplete="username" required />
+        <label class="field-label login-password-label" for="admin-password">Mật khẩu</label>
+        <input class="form-control" id="admin-password" name="password" type="password" autocomplete="current-password" required />
+        <p class="admin-message" id="login-message" role="alert"></p>
+        <button class="button button-dark admin-submit" id="login-submit" type="submit">Đăng nhập <span aria-hidden="true">↗</span></button>
+      </form>
+    </main>
+  </body>
+</html>
